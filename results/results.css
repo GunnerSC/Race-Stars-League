@@ -56,6 +56,10 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    color: gold;
+}
+
 table {
     margin-left: 200px;
     margin-right: 200px;
