@@ -81,8 +81,15 @@ img {
 }
 
 #voltar {
-    font-size: 20px;
-    margin-top: 20em;
+    font-family: 'Luckiest Guy', cursive;
+    font-weight: lighter;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #0d589e;
 }
 
 .tp {
