@@ -76,14 +76,14 @@ table {
 th {
     padding: 5px;
     height: 30px;
-    border: 1px solid white;
+    border: 1px solid rgba(255, 255, 255, 0.496);
 }
 
 td {
     padding: 5px;
     padding-left: 20px;
     height: 30px;
-    border: 1px solid white;
+    border: 1px solid rgba(255, 255, 255, 0.496);
     font-variant: normal;
 }
 
@@ -186,7 +186,7 @@ span.HRT {
 
 span.Marussia {
     font-variant: small-caps;
-    color: black;
+    color: rgba(82, 82, 82, 0.698);
 
 }
 
