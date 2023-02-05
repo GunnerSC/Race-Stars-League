@@ -24,9 +24,7 @@ body {
     font-variant: small-caps;
     
 }
-span {
-    margin-left: 20px;
-}
+
 h1, h2 {
     font-family: 'Luckiest Guy', cursive;
     font-weight: bolder;
@@ -37,11 +35,6 @@ h1, h2 {
     margin: 0px;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #0d589e;
-}
-
-a {
-    color: white;
-    text-decoration: none;
 }
 
 table {
@@ -68,6 +61,11 @@ td {
     padding-left: 20px;
     height: 30px;
     border: 1px solid white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
 }
 
 img {
