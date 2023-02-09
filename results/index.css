@@ -23,7 +23,7 @@ body {
 }
 
 
-#hiddenres {
+div#hiddenres {
     display: none;
 }
 
@@ -36,7 +36,6 @@ menu {
     text-align: center;
     margin: auto;
     padding: 0px;
-    display: none;
 }
 
 #mainmenu {
@@ -77,12 +76,12 @@ input {
     margin-bottom: 15px;
     text-align: center;
     height: 1.5em;
-    width: 8em;
+    width: 5em;
     border-radius: 0px;
     border: 1px solid rgba(255, 255, 255, 0.496);
 }
 
-h1, h2, #voltar {
+h1, h2 {
     font-family: 'Luckiest Guy', cursive;
     font-weight: bolder;
     font-size: 55px;
@@ -161,6 +160,19 @@ table#construtor {
     font-size: 20px;
 }
 
+.tablepts {
+    width: 400px;
+    margin-left: 300px;
+    margin-right: 300px;
+    font-size: 20px;
+}
+
+.consttitle {
+    width: 35px;
+    padding-left: 10px;
+}
+
+
 th {
     padding: 5px;
     height: 30px;
@@ -181,25 +193,7 @@ td {
     height: 30px;
     border: 1px solid rgba(255, 255, 255, 0.496);
     font-variant: normal;
-    font-size: 20px;
-}
-
-.tablepts {
-    width: 400px;
-    margin-left: 300px;
-    margin-right: 300px;
-    font-size: 20px;
-}
-
-.consttittle {
-    font-size: 20px;
-    width: 20px;
-}
-
-.teamrank {
-    font-size: 20px;
-    width: 35px;
-    padding-left: 20px;
+    font-size: 18px;
 }
 
 
@@ -213,10 +207,6 @@ td {
 
 img {
     padding-right: 10px;
-}
-
-img.podium {
-    padding-right: 1px;
 }
 #voltar {
     text-align: center;
@@ -238,11 +228,10 @@ img.podium {
 
 span {
    /* display: none;*/
+   color: greenyellow;
     font-size: 12px;
 }
-.spanpts {
-    color: greenyellow;
-}
+
 span.spantitle {
     margin-left: 10px;
     font-size: 18px;
@@ -336,113 +325,72 @@ span.TecNova {
 }
 
 span#Mercedes {
-    font-size: 18px;
     font-variant: small-caps;
     color: cyan
 }
 
 span#Caterham {
-    font-size: 18px;
     font-variant: small-caps;
     color: rgb(17, 245, 17);
 }
 
 span#Ferrari {
-    font-size: 18px;
     font-variant: small-caps;
     color: rgb(255, 54, 54);
 }
 
 span#RedBull {
-    font-size: 18px;
     font-variant: small-caps;
     color: rgb(2, 60, 234);
 }
 
 span#Satsu {
-    font-size: 18px;
     font-variant: small-caps;
     color: rgb(235, 2, 235);
 }
 
 span#ToroRosso {
-    font-size: 18px;
     font-variant: small-caps;
     color: rgb(2, 60, 234);
 }
 
 span#Williams {
-    font-size: 18px;
     font-variant: small-caps;
     color: rgb(66, 120, 246);
 }
 
 span#Lotus {
-    font-size: 18px;
     font-variant: small-caps;
     color: yellow;
 }
 
 span#Sauber {
-    font-size: 18px;
     font-variant: small-caps;
     color: rgb(97, 5, 5);
 }
 
 span#McLaren {
-    font-size: 18px;
     font-variant: small-caps;
     color: rgb(254, 157, 31);
 }
 
 span#ForceIndia {
-    font-size: 18px;
     font-variant: small-caps;
     color: rgb(255, 204, 0);
 }
 
 span#HRT {
-    font-size: 18px;
     font-variant: small-caps;
     color: sienna;
 }
 
 span#Marussia {
-    font-size: 18px;
     font-variant: small-caps;
     color: rgba(82, 82, 82, 0.698);
 
 }
 
 span#TecNova {
-    font-size: 18px;
     font-variant: small-caps;
     color: rgb(235, 2, 235);
 }
-
-
-#statspage {
-    width: 1000px;
-    padding: 0px;
-    text-align: center;
-}
-
-.statsplayer {
-    background-image: linear-gradient(to right, var(--cor5), var(--cor6), var(--cor7));
-    text-align: center;
-    margin: 10px;
-    display: inline-table;
-    width: 300px;
-    height: 200px;
-    border: 1px solid rgba(255, 255, 255, 0.496);
-    border-radius: 25px;
-    font-family: 'Luckiest Guy', cursive;
-    font-variant: small-caps;
-    font-size: 16px;
-}
-
-.statsplayer > p {
-    text-align: left;
-    margin-left: 50px;
-}
-
