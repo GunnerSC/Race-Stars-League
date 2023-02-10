@@ -169,6 +169,7 @@ tableRows.forEach(function(row) {
     }
 
     let Caterham = { nome: 'Caterham', p1: caterhamp1, p2: caterhamp2, p3: caterhamp3, podium: caterhamp1+caterhamp2+caterhamp3}
+    let 
 
    
 
