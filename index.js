@@ -1,11 +1,15 @@
    
    
    
-   let gunnerp1 = 0;       let gunnerp2 = 0;       let gunnerp3 = 0;
+     let gunnerp1 = 0;       let gunnerp2 = 0;       let gunnerp3 = 0;
 
     let sliinkp1 = 0;       let sliinkp2 = 0;       let sliinkp3 = 0;
 
     let nekomorip1 = 0;     let nekomorip2 = 0;     let nekomorip3 = 0;
+
+    let balaop1 = 0;        let balaop2 = 0;       let balaop3 = 0;
+
+    let newplayerp1 = 0;    let newplayerp2 = 0;    let newplayerp3 = 0;
 
     let botp1 = 0;
     let botp2 = 0;
@@ -32,6 +36,8 @@ tableRows.forEach(function(row) {
     if (p1 && p1.textContent.includes("Gunner")) {gunnerp1++;}
     else if (p1 && p1.textContent.includes("Sliink")) {sliinkp1++;}
     else if (p1 && p1.textContent.includes("Nekomori")) {nekomorip1++;}
+    else if (p1 && p1.textContent.includes("Balao")) {balaop1++;}
+    else if (p1 && p1.textContent.includes("Newplayer")) {newplayerp1++;}
     else if (p1 && p1.textContent.includes("Bot")) {botp1++;}
     else if (p1 && p1.textContent.includes("Caterham")) {caterhamp1++;}})
 
@@ -40,6 +46,8 @@ tableRows.forEach(function(row) {
     if (p2 && p2.textContent.includes("Gunner")) {gunnerp2++;}
     else if (p2 && p2.textContent.includes("Sliink")) {sliinkp2++;}
     else if (p2 && p2.textContent.includes("Nekomori")) {nekomorip2++;}
+    else if (p2 && p2.textContent.includes("Balao")) {balaop2++;}
+    else if (p2 && p2.textContent.includes("Newplayer")) {newplayerp2++;}
     else if (p2 && p2.textContent.includes("Bot")) {botp2++;}});
 
 tableRows.forEach(function(row) {
@@ -47,6 +55,8 @@ tableRows.forEach(function(row) {
     if (p3 && p3.textContent.includes("Gunner")) {gunnerp3++;}
     else if (p3 && p3.textContent.includes("Sliink")) {sliinkp3++;}
     else if (p3 && p3.textContent.includes("Nekomori")) {nekomorip3++;}
+    else if (p3 && p3.textContent.includes("Balao")) {balaop3++;}
+    else if (p3 && p3.textContent.includes("Newplayer")) {newplayerp3++;}
     else if (p3 && p3.textContent.includes("Bot")) {botp3++;}});
 
 tableRows.forEach(function(row) {
@@ -107,6 +117,8 @@ tableRows.forEach(function(row) {
     let gunnerpodium = (gunnerp1+gunnerp2+gunnerp3)
     let sliinkpodium = (sliinkp1+sliinkp2+sliinkp3)
     let nekomoripodium = (nekomorip1+nekomorip2+nekomorip3)
+    let newplayerpodium = (newplayerp1+newplayerp2+newplayerp3)
+    let balaopodium = (balaop1+balaop2+balaop3)
     let botpodium = (botp1+botp2+botp3)
     
     let gun = document.getElementsByClassName('gunnerpt')
@@ -118,6 +130,12 @@ tableRows.forEach(function(row) {
     let slink = document.getElementsByClassName('sliinkpt')
     let sliinkpontos = 0;
     
+    let bala = document.getElementsByClassName('balaopt')
+    let balaopontos = 0;
+
+    let newp = document.getElementsByClassName('newplayerpt')
+    let newplayerpontos = 0;
+
 
 
     for(let i = 0; i < gun.length; i++) {
@@ -131,6 +149,15 @@ tableRows.forEach(function(row) {
     for(let i = 0; i < slink.length; i++) {
         sliinkpontos += parseInt(slink[i].textContent);
     }
+
+    for(let i = 0; i < bala.length; i++) {
+        balaopontos += parseInt(bala[i].textContent);
+    }
+
+    for(let i = 0; i < neko.length; i++) {
+        newplayerpontos += parseInt(neko[i].textContent);
+    }
+    
 
     let Gunner = {
         nome: 'Gunner',
@@ -160,6 +187,22 @@ tableRows.forEach(function(row) {
         podium: nekomoripodium
     }
 
+    let Balao = {
+        nome: 'Balao',
+        pontos: balaopontos,
+        p1: balaop1,
+        p2: balaop2,
+        p3: balaop3,
+    }
+
+    let Newplayer = {
+        nome: 'New Player',
+        pontos: newplayerpontos,
+        p1: newplayerp1,
+        p2: newplayerp2,
+        p3: newplayerp3,
+    }
+
     let Bot = {
         nome: 'Bot',
         p1: botp1,
@@ -169,7 +212,6 @@ tableRows.forEach(function(row) {
     }
 
     let Caterham = { nome: 'Caterham', p1: caterhamp1, p2: caterhamp2, p3: caterhamp3, podium: caterhamp1+caterhamp2+caterhamp3}
-    let 
 
    
 
@@ -237,7 +279,7 @@ res.innerHTML = `
             <input type="button" value="Stats" onclick="stats()">
         </menu>
     <h2>Ranking de Títulos</h2>
-    <table class="tabletitle">
+    <table class="tabletitle1">
         <thead id="theadtitle">
             <tr class="trtitle">
             <th class="thtitle">Pos</th>
@@ -247,26 +289,26 @@ res.innerHTML = `
         </thead>
         <tbody class="tbodytitle">
             <tr class="trtitle">
-            <td class="tdtitle">1°</td>
+            <td class="tdtitle dvpos">1°</td>
             <td class="tdtitle"><img src="img/Nekomori.png" alt="">${Nekomori.nome}</td>
             <td class="tdtitle tptitle"><span class="spantitle dvp1">🏆${Nekomori.p1} </span><span class="spantitle dvp2">🥈${Nekomori.p2}</span><span class="spantitle dvp3">🥉${Nekomori.p3}</span><span class="spantitle"><img src="img/podium.png" alt="">${Nekomori.podium}</span></td>
             </tr>
             <tr class="trtitle">
-            <td class="tdtitle">2°</td>
+            <td class="tdtitle dvpos">2°</td>
             <td class="tdtitle"><img src="img/Sliink.png" alt="">${Sliink.nome}</td>
             <td class="tdtitle tptitle"><span class="spantitle dvp1">🏆${Sliink.p1}</span><span class="spantitle dvp2">🥈${Sliink.p2}</span><span class="spantitle dvp3">🥉${Sliink.p3}</span><span class="spantitle"><img src="img/podium.png" alt="">${Sliink.podium}</span></td>
             </tr>
             <tr class="trtitle">
-            <td class="tdtitle">3°</td>
+            <td class="tdtitle dvpos">3°</td>
             <td class="tdtitle"><img src="img/Gunner.png" alt="">${Gunner.nome}</td>
             <td class="tdtitle tptitle"><span class="spantitle dvp1">🏆${Gunner.p1}</span><span class="spantitle dvp2">🥈${Gunner.p2}</span><span class="spantitle dvp3">🥉${Gunner.p3}</span><span class="spantitle"><img src="img/podium.png" alt="">${Gunner.podium}</span></td>
             </tr>
             <tr class="trtitle">
-            <td class="tdtitle">4°</td>
+            <td class="tdtitle dvpos">4°</td>
             <td class="tdtitle"><img src="img/bot.png" alt="">${Bot.nome}</td>
             <td class="tdtitle tptitle"><span class="spantitle dvp1">🏆${Bot.p1}</span><span class="spantitle dvp2">🥈${Bot.p2}</span><span class="spantitle dvp3">🥉${Bot.p3}</span><span class="spantitle"><img src="img/podium.png" alt="">${Bot.podium}</span></td>
             </tr>
-            </tbody class="tbodytitle">
+            </tbody>
     </table>
 
     <h2>Ranking de Pontos</h2>
@@ -298,7 +340,7 @@ res.innerHTML = `
     </table>
 
     <h2>Ranking de Construtores</h2>
-    <table class="tabletitle" id="construtor">
+    <table class="tabletitle2" id="construtor">
         <thead id="theadtitle">
             <tr class="trtitle">
                 <th class="thtitle consttittle">Pos</th>
@@ -349,38 +391,6 @@ res.innerHTML = `
 </body>
 </html>`
 
-
-function sortTableByP1() {
-    var table, rows, switching, i, x, y, shouldSwitch;
-    table = document.getElementById("tabletitle");
-    switching = true;
-    while (switching) {
-      switching = false;
-      rows = table.getElementsByTagName("tr");
-      for (i = 1; i < (rows.length - 1); i++) {
-        shouldSwitch = false;
-        x = rows[i].getElementsByClassName("dvp1")[0];
-        y = rows[i + 1].getElementsByClassName("dvp1")[0];
-        if (Number(x.innerHTML) < Number(y.innerHTML)) {
-          shouldSwitch = true;
-          break;
-        }
-        if (Number(x.innerHTML) == Number(y.innerHTML)) {
-          x = rows[i].getElementsByClassName("dvp2")[0];
-          y = rows[i + 1].getElementsByClassName("dvp2")[0];
-          if (Number(x.innerHTML) < Number(y.innerHTML)) {
-            shouldSwitch = true;
-            break;
-          }
-        }
-      }
-      if (shouldSwitch) {
-        rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-        switching = true;
-      }
-    }
-  }
-
 var table, rows, switching, i, x, y, shouldSwitch, positions;
 table = document.querySelector(".tablepts");
 switching = true;
@@ -416,6 +426,51 @@ while (switching) {
 rows = table.rows;
 for (i = 1; i < rows.length; i++) {
   rows[i].getElementsByClassName("dvrankpos")[0].innerHTML = positions[i - 1];
+}
+
+
+
+
+
+
+
+
+
+var table2, rows2, switching2, j, a, b, shouldSwitch2, positions2;
+table2 = document.querySelector(".tabletitle2");
+switching2 = true;
+
+// Armazenar as posições em uma matriz separada
+positions2 = [];
+rows2 = table2.rows;
+for (j = 1; j < rows2.length; j++) {
+positions2.push(rows2[j].getElementsByClassName("teamrank")[0].innerHTML);
+}
+
+// Ordenar as linhas da tabela baseada na coluna "consttittle"
+while (switching2) {
+switching2 = false;
+rows2 = table2.rows;
+
+for (j = 1; j < (rows2.length - 1); j++) {
+shouldSwitch2 = false;
+a = rows2[j].getElementsByClassName("consttittle")[0];
+b = rows2[j + 1].getElementsByClassName("consttittle")[0];
+if (parseInt(a.innerHTML) < parseInt(b.innerHTML)) {
+shouldSwitch2 = true;
+break;
+}
+}
+if (shouldSwitch2) {
+rows2[j].parentNode.insertBefore(rows2[j + 1], rows2[j]);
+switching2 = true;
+}
+}
+
+// Adicionar as posições de volta às linhas da tabela
+rows2 = table2.rows;
+for (j = 1; j < rows2.length; j++) {
+rows2[j].getElementsByClassName("teamrank")[0].innerHTML = positions2[j - 1];
 }
 
 }
