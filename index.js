@@ -384,6 +384,11 @@ res.innerHTML = `
                 <td class="tdtitle"><span class="spantitle" id="Satsu">Satsu</span></td>
                 <td class="tdtitle consttittle">${satsup1}</td>
             </tr>
+            <tr class="trtitle">
+            <td class="tdtitle teamrank">7°</td>
+            <td class="tdtitle"><span class="spantitle" id="RedBull">Red Bull</span></td>
+            <td class="tdtitle consttittle">${redbullp1}</td>
+        </tr>
         </tbody>
     </table>
     <a href="index.html"><div id="voltar">Voltar</div></a>
