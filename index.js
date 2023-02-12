@@ -371,8 +371,8 @@ res.innerHTML = `
             </tr>
             <tr class="trtitle">
                 <td class="tdtitle teamrank">5°</td>
-                <td class="tdtitle"><span class="spantitle" id="ToroRosso">Toro Rosso</span></td>
-                <td class="tdtitle consttittle">${tororossop1}</td>
+                <td class="tdtitle"><span class="spantitle" id="RedBull">Red Bull</span></td>
+                <td class="tdtitle consttittle">${redbullp1}</td>
             </tr>
             <tr class="trtitle">
                 <td class="tdtitle teamrank">6°</td>
@@ -385,9 +385,9 @@ res.innerHTML = `
                 <td class="tdtitle consttittle">${satsup1}</td>
             </tr>
             <tr class="trtitle">
-            <td class="tdtitle teamrank">7°</td>
-            <td class="tdtitle"><span class="spantitle" id="RedBull">Red Bull</span></td>
-            <td class="tdtitle consttittle">${redbullp1}</td>
+            <td class="tdtitle teamrank">8°</td>
+            <td class="tdtitle"><span class="spantitle" id="ToroRosso">Toro Rosso</span></td>
+            <td class="tdtitle consttittle">${tororossop1}</td>
         </tr>
         </tbody>
     </table>
