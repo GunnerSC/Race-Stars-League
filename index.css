@@ -19,6 +19,7 @@ body {
     width:1000px;
     margin: auto;
     font-variant: small-caps;
+    overflow-x: auto;
     
 }
 
@@ -26,7 +27,6 @@ body {
 #hiddenres {
     display: none;
 }
-
 
 
 
