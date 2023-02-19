@@ -25,7 +25,9 @@ body {
 
 
 
-
+#hiddenres {
+    display: none;
+}
 
 menu {
     width: 800px;
