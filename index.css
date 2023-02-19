@@ -58,12 +58,12 @@ menu {
     border: 1px solid white;    
 }
 
-#mainmenu > input:hover {
+a.menu:hover {
     color: gold;
 }
 
 
-input {
+a.menu {
     display: inline-block;
     color: white;
     background-image: linear-gradient(to right, var(--cor5), var(--cor6), var(--cor7), var(--cor8));
@@ -76,7 +76,7 @@ input {
     text-align: center;
     height: 1.5em;
     width: 8em;
-    border-radius: 0px;
+    border-radius: 500px;
     border: 1px solid rgba(255, 255, 255, 0.496);
 }
 
